@@ -1,0 +1,16 @@
+<hr style="margin-top:30px; border:1px solid #222;">
+
+<h3 style="color:#2ecc71;">Prossimi appuntamenti</h3>
+
+{% for p in prenotazioni %}
+    <div style="background:#111; padding:10px; margin:10px; border-radius:10px; text-align:left;">
+
+        <b>{{ p.nome_cliente }}</b><br>
+        📞 {{ p.telefono }}<br>
+        📅 {{ p.data }} - ⏰ {{ p.ora }}<br>
+        ✂️ {{ p.servizio }}
+
+    </div>
+{% empty %}
+    <p style="color:#aaa;">Nessuna prenotazione</p>
+{% endfor %}

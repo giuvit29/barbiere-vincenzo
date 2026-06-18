@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbiere Vincenzo Esposito</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+
+            /* 💚 nuovo sfondo verde elegante */
+            background: #0b1f14;
+
+            color: white;
+        }
+
+        /* TOP SCREEN */
+        .screen {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 140px;
+            margin-top: 20px;
+        }
+
+        .title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            color: #b7f7c1;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        /* BUTTON */
+        .btn {
+            margin-top: 30px;
+            width: 90%;
+            padding: 16px;
+            border-radius: 14px;
+            border: none;
+            background: #2ecc71;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #27ae60;
+        }
+
+        /* CARD PRENOTAZIONI */
+        .card {
+            background: #10281c;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: left;
+            border: 1px solid #1f3d2b;
+        }
+
+        .green {
+            color: #2ecc71;
+        }
+
+        /* BOTTOM NAV */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #08140d;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+            border-top: 1px solid #1f3d2b;
+        }
+
+        .nav-item {
+            text-align: center;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .nav-item.active {
+            color: #2ecc71;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

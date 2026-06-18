@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="screen">
+
+    <div class="title">Prenota appuntamento</div>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input name="nome_cliente" placeholder="Nome"
+        style="width:90%; padding:12px; margin-top:20px; border-radius:10px;"><br>
+
+        <input name="telefono" placeholder="Telefono"
+        style="width:90%; padding:12px; margin-top:10px; border-radius:10px;"><br>
+
+        <input type="date" name="data"
+        style="width:90%; padding:12px; margin-top:10px; border-radius:10px;"><br>
+
+        <input type="time" name="ora"
+        style="width:90%; padding:12px; margin-top:10px; border-radius:10px;"><br>
+
+        <select name="servizio"
+        style="width:90%; padding:12px; margin-top:10px; border-radius:10px;">
+            <option value="taglio">Taglio</option>
+            <option value="barba">Barba</option>
+            <option value="combo">Taglio + Barba</option>
+        </select>
+
+        <button class="btn">Conferma prenotazione</button>
+    </form>
+
+</div>
+
+{% endblock %}

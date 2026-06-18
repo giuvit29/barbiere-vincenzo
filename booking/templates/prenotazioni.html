@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="screen">
+
+    <h2>📋 Prenotazioni Barbiere</h2>
+
+    <!-- FILTRI -->
+    <a href="?filtro=oggi">Oggi</a> |
+    <a href="?filtro=domani">Domani</a> |
+    <a href="/prenotazioni/">Tutte</a>
+
+    <hr>
+
+    {% for p in prenotazioni %}
+
+        <div style="background:#111; padding:10px; margin:10px; border-radius:10px;">
+
+            <b>{{ p.nome_cliente }}</b>
+
+            {% if p.completata %}
+                <span style="color:green;">✔ Completata</span>
+            {% endif %}
+
+            <br>
+            📞 {{ p.telefono }}<br>
+            📅 {{ p.data|date:"d/m/Y" }} - ⏰ {{ p.ora|time:"H:i" }}
+            ✂️ {{ p.servizio }}
+
+            <br><br>
+
+            <a href="{% url 'completa' p.id %}">
+                ✔ Completa
+            </a>
+
+            |
+
+            <a href="{% url 'elimina' p.id %}" style="color:red;">
+                ❌ Elimina
+            </a>
+
+        </div>
+
+    {% empty %}
+        <p>Nessuna prenotazione</p>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
