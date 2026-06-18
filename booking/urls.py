@@ -1,10 +1,7 @@
-from django.urls import path
-from . import views
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    path("", views.home, name="home"),
-    path("prenota/", views.prenota, name="prenota"),
-    path("prenotazioni/", views.prenotazioni, name="prenotazioni"),
-    path("elimina/<int:id>/", views.elimina_prenotazione, name="elimina"),
-    path("completa/<int:id>/", views.completa_prenotazione, name="completa"),
+    path('admin/', admin.site.urls),
+    path('', include('booking.urls')),
 ]
